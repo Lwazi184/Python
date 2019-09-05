@@ -1,0 +1,69 @@
+import time
+
+true = ["T", "t", "True", "true"]
+false = ["F", "f", "False", "false"]
+
+correct = 0
+
+#Welcoming the user to the game and storing their name. 
+name = input ("What is your name? ")
+
+time.sleep(3)
+
+print ("Okay,",  name, "let's get started. Remember, the following answers are only True or False.")
+
+time.sleep(2)
+
+print ("Paris is the captial of France.")
+choice = input("1. ")
+
+if choice in true:
+    #we accummulate the players score whenever they get the answer true. If not true it does not accummulate.
+  correct = correct + 1
+else:
+  correct = correct + 0
+
+time.sleep(2) 
+
+print ("England is an island.")
+
+choice = input("2. ")
+
+if choice in true:
+  correct = correct + 1
+else:
+  correct = correct + 0  
+  
+time.sleep(2)
+
+print ("Northern Ireland isn't part of Great Britian.")
+
+choice = input("3. ")
+
+if choice in false:
+  correct = correct + 1
+else:
+  correct = correct + 0 
+  
+time.sleep(2)  
+
+print ("Andorra is between France and Spain.")
+choice = input("4. ")
+if choice in true:
+  correct = correct + 1
+else:
+  correct = correct + 0  
+
+time.sleep(2) 
+
+print ("Iran use to be part of the Perisan Empire.")
+choice = input("5. ")
+if choice in true:
+  correct = correct + 1
+else:
+  correct = correct + 0
+
+time.sleep(2)
+
+#Outcome when the user has finished playing.    
+print ("You're finished, ", name ,". You got", correct, "out of 5 correct!")
